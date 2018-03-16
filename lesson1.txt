@@ -1,0 +1,70 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    If a bug is introduced after changing some code, it must be related to the change. 'diff' can help us to find what has been changed.
+-----------------------------------------------------------------------------------------
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+You can save time for retrieving older version of your code when you notice you have a bug in the newer version.
+a) If one need some code snippet that was used in old version, he doesn't have to rewrite the code.
+b) If there is some part that doesn't look make sense, one can look up history. 
+c) If things get changed, and need to roll back to some previous version, it can be easily done.
+
+---------------------------------------------------------------------------------------------
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+pros: 
+1) can easily find version to roll back. Because we think our workprocess as logical work unit.
+2) no extra work is needed to get working code base.
+3) 'diff' would be more efficient, because there is context about what has been changed.
+cons:
+1) loose changed data if user doesn't commit.
+2) log may become too clutered, if user commit too often.
+
+ ----------------------------------------------------------------------------------------------------------------  
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+Because in programming one logical change comes with multiple file change, so that one can save entire working project rather than single individual file.
+
+ ------------------------------------------------------------------------------------------------------------------------   
+
+How can you use the commands git log and git diff to view the history of files?
+
+ *git log can be used to list the summaries of all the changes made to the repository.
+              or Gives a listing of the commits that changed  a particular file as specified.
+
+* git diff can be used to see what has actually changed between two given commits.
+            Gives the changes in files between those two commits.
+             But only between those 2 commits, not through all the commits that changed file.
+ git log shows all the commits, or versions, of my files that I have ever
+    saved (or that the person who created the history ever saved).  I can use
+    that to see the message for each commit, and get a quick idea of the sorts
+    of changes that have been made.
+
+    To dig deeper into any commit, I can use git diff to compare that commit to
+    the previous commit and see exactly what changes were introduced.
+
+----------------------------------------------------------------------------------------------------------------------------
+How might using version control make you more confident to make changes that
+could break something?
+
+  If I have previous versions saved, it will be easy to restore a previous,
+    working version of the code if I mess something up.  Not only that, it will
+    be easier to figure out why the code broke since I won't have to worry about
+    forgetting what I changed.
+
+You can try changing any critical features, since you can always revert back to the point 
+when those were working correctly. If you find something is not working, you can git log, 
+and try the previous versions untill you find the one which works, and make diff of the l
+ast one that worked correctly and the commit following it. That result would show where and
+ how the bug was introduced.
+
+------------------------------------------------------------------------------------------------------------------------------
+Now that you have your workspace set up, what do you want to try using Git for?
+
+  
